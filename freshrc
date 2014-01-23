@@ -27,3 +27,8 @@ fresh config/git/gitconfig --file
 # ViM
 #
 fresh config/vim/vimrc --file
+
+#
+# i3
+#
+fresh config/i3/config --file="~/.i3/config"
