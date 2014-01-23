@@ -10,7 +10,7 @@ fresh freshshell/fresh bin/fresh --bin
 #
 
 # prompt 
-fresh config/git-completion.sh --file=~/.git-completion.sh
+fresh config/git/git-completion.sh
 fresh shell/prompt.sh
 
 # environment
