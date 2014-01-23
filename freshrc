@@ -17,3 +17,13 @@ fresh shell/prompt.sh
 fresh config/global_env.sh
 fresh config/heroku_env.sh
 fresh config/terminal_env.sh
+
+#
+# Git
+#
+fresh config/git/gitconfig --file
+
+#
+# ViM
+#
+fresh config/vim/vimrc --file
