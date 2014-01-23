@@ -1,0 +1,19 @@
+#
+# Bootstrapping
+#
+
+# fresh: dotfile manager
+fresh freshshell/fresh bin/fresh --bin
+
+#
+# Shell
+#
+
+# prompt 
+fresh config/git-completion.sh --file=~/.git-completion.sh
+fresh shell/prompt.sh
+
+# environment
+fresh config/global_env.sh
+fresh config/heroku_env.sh
+fresh config/terminal_env.sh
