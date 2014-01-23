@@ -14,9 +14,9 @@ fresh config/git/git-completion.sh
 fresh shell/prompt.sh
 
 # environment
-fresh config/global_env.sh
-fresh config/heroku_env.sh
-fresh config/terminal_env.sh
+fresh shell/global_env.sh
+fresh shell/heroku_env.sh
+fresh shell/terminal_env.sh
 
 #
 # Git
