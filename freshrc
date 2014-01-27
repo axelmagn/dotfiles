@@ -33,11 +33,17 @@ fresh config/bash/bashrc --file
 #
 fresh config/git/gitconfig --file
 
+
 #
 # ViM
 #
-fresh gmarik/vundle . --file="~/.vim/bundle/vundle/"
+
+# vimrc
 fresh config/vim/vimrc --file
+
+# vundle
+fresh gmarik/vundle . --file="~/.vim/bundle/vundle/"
+
 
 #
 # i3
