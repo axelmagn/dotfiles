@@ -142,7 +142,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # pretty background
-exec feh --bg-fill $HOME/.i3/astronaut_on_fire.jpg
+exec feh --bg-fill $HOME/.backgrounds/astronaut_on_fire.jpg
 
 # stop nautilus from spawning a desktop window
 exec gsettings set org.gnome.desktop.background show-desktop-icons false

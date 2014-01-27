@@ -13,10 +13,20 @@ fresh freshshell/fresh bin/fresh --bin
 fresh config/git/git-completion.sh
 fresh shell/prompt.sh
 
+# aliases
+fresh shell/aliases.sh
+
 # environment
 fresh shell/global_env.sh
 fresh shell/heroku_env.sh
 fresh shell/terminal_env.sh
+
+# man pages
+fresh shell/manpages_color.sh
+
+# bashrc
+fresh config/bash/bashrc --file
+
 
 #
 # Git
@@ -26,9 +36,15 @@ fresh config/git/gitconfig --file
 #
 # ViM
 #
+fresh gmarik/vundle . --file="~/.vim/bundle/vundle/"
 fresh config/vim/vimrc --file
 
 #
 # i3
 #
 fresh config/i3/config --file="~/.i3/config"
+
+#
+# backgrounds
+#
+fresh backgrounds --file="~/.backgrounds/"
