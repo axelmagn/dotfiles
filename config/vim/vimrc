@@ -41,6 +41,7 @@ Bundle 'gmarik/vundle'
 
 " Vundle managed plugins
 Bundle 'jpalardy/vim-slime'
+Bundle 'scrooloose/syntastic'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -51,6 +52,13 @@ Bundle 'jpalardy/vim-slime'
 let g:slime_target = "tmux"
 let g:slime_paste_file = "$HOME/.slime_paste"
 let g:slime_default_config = {"socket_name": "default", "target_pane": "1"}
+
+" syntastic config
+let g:syntastic_mode_map = {    "mode": "active",
+                           \    "active_filtypes": [],
+                           \    "passive_filetypes": ["java"] }
+
+let g:syntastic_java_checkers = ['javac']
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
