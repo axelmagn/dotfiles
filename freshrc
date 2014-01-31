@@ -46,6 +46,12 @@ fresh gmarik/vundle . --file="~/.vim/bundle/vundle/"
 
 
 #
+# tmux
+#
+fresh config/tmux/tmux.conf --file
+
+
+#
 # i3
 #
 fresh config/i3/config --file="~/.i3/config"
