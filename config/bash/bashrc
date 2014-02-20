@@ -1,1 +1,4 @@
 source ~/.fresh/build/shell.sh
+if -e ~/.localrc
+    source ~/.localrc
+fi
