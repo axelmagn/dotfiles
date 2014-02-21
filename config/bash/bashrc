@@ -1,4 +1,5 @@
 source ~/.fresh/build/shell.sh
-if -e ~/.localrc
-    source ~/.localrc
+if [ -f ~/.localrc ]
+    then
+        source ~/.localrc
 fi
