@@ -142,7 +142,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # background default
-xsetroot -solid "#111111"
+exec xsetroot -solid "#111111"
 
 # pretty background
 exec feh --bg-fill $HOME/.backgrounds/astronaut_on_fire.jpg
