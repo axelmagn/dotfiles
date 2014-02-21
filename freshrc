@@ -24,6 +24,9 @@ fresh shell/terminal_env.sh
 # man pages
 fresh shell/manpages_color.sh
 
+# i3lock prettify
+fresh shell/i3lock_bg.sh
+
 # bashrc
 fresh config/bash/bashrc --file
 
