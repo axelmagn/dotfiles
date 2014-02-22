@@ -20,6 +20,7 @@ fresh shell/aliases.sh
 fresh shell/global_env.sh
 fresh shell/heroku_env.sh
 fresh shell/terminal_env.sh
+fresh shell/go_env.sh
 
 # man pages
 fresh shell/manpages_color.sh
