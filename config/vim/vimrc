@@ -42,6 +42,7 @@ Bundle 'gmarik/vundle'
 " Vundle managed plugins
 Bundle 'jpalardy/vim-slime'
 Bundle 'scrooloose/syntastic'
+Bundle 'Valloric/YouCompleteMe'
 
 " Language support plugins
 Bundle 'digitaltoad/vim-jade'
