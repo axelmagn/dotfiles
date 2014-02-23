@@ -24,9 +24,6 @@ fresh shell/terminal_env.sh
 # man pages
 fresh shell/manpages_color.sh
 
-# i3lock prettify
-fresh shell/i3lock_bg.sh
-
 # bashrc
 fresh config/bash/bashrc --file
 
@@ -58,6 +55,9 @@ fresh config/tmux/tmux.conf --file
 # i3
 #
 fresh config/i3/config --file="~/.i3/config"
+
+# i3lock wrapper
+fresh bin/lock --bin
 
 #
 # backgrounds

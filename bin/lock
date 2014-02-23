@@ -1,0 +1,6 @@
+#/bin/bash
+import -window root $HOME/.i3lockbg.png 
+convert -scale 8% -scale 1250% $HOME/.i3lockbg.png $HOME/.i3lockbg.png
+i3lock -i $HOME/.i3lockbg.png
+
+
