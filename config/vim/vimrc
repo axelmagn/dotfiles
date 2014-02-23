@@ -45,6 +45,7 @@ Bundle 'scrooloose/syntastic'
 
 " Language support plugins
 Bundle 'digitaltoad/vim-jade'
+Bundle 'groenewege/vim-less'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
