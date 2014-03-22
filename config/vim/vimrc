@@ -99,7 +99,7 @@ set foldmethod=syntax
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => File Types
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 textwidth=80 nosmartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 textwidth=80 nosmartindent foldmethod=indent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au FileType htmldjango setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType html setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
