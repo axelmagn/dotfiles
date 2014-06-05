@@ -48,6 +48,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-markdown'
+Bundle 'tfnico/vim-gradle'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
