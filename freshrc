@@ -25,6 +25,9 @@ fresh shell/go_env.sh
 # man pages
 fresh shell/manpages_color.sh
 
+# cowsay fortunes
+fresh shell/fortune.sh
+
 # bashrc
 fresh config/bash/bashrc --file
 
