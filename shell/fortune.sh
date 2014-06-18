@@ -1,0 +1,1 @@
+cowsay `fortune`; echo; echo
