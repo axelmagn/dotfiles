@@ -102,11 +102,11 @@ bindsym $mod+Shift+parenleft move container to workspace 9
 bindsym $mod+Shift+parenright move container to workspace 10
 
 # volume keys mapped to alsamixer
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 4%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 4%- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
-bindsym $mod+equal exec amixer -q set Master 2dB+ unmute
-bindsym $mod+minus exec amixer -q set Master 2dB- unmute
+bindsym $mod+equal exec amixer -q set Master 4%+ unmute
+bindsym $mod+minus exec amixer -q set Master 4%- unmute
 
 # reload the configuration file
 bindsym $mod+Shift+C reload
