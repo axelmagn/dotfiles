@@ -48,12 +48,13 @@ fresh config/vim/vimrc --file
 # vundle
 fresh gmarik/vundle . --file="~/.vim/bundle/vundle/"
 
-
 #
 # tmux
 #
 fresh config/tmux/tmux.conf --file
 
+# conky
+fresh config/conky/conkyrc --file
 
 #
 # i3
