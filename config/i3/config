@@ -27,6 +27,8 @@ bindsym $mod+Shift+Q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 
+bindsym $mod+bar exec firefox
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
