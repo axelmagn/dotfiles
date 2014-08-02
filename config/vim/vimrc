@@ -50,6 +50,7 @@ Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-markdown'
 Bundle 'tfnico/vim-gradle'
 Bundle 'fatih/vim-go'
+Plugin 'wting/rust.vim'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -96,6 +97,10 @@ nmap <leader>w :w!<cr>
 
 " fold method
 set foldmethod=syntax
+
+" Cursor line and column
+set cursorline 
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
