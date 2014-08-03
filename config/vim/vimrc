@@ -47,6 +47,7 @@ Bundle 'Valloric/YouCompleteMe'
 " Language support plugins
 Bundle 'digitaltoad/vim-jade'
 Bundle 'groenewege/vim-less'
+Bundle 'cespare/vim-toml'
 Bundle 'tpope/vim-markdown'
 Bundle 'tfnico/vim-gradle'
 Bundle 'fatih/vim-go'
