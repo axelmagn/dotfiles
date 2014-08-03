@@ -29,7 +29,7 @@ bindsym $mod+Shift+Q kill
 bindsym $mod+d exec dmenu_run
 
 # start a web browser
-bindsym $mod+bar exec chromium
+bindsym $mod+bar exec firefox
 
 # change focus
 bindsym $mod+h focus left
