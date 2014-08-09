@@ -102,13 +102,13 @@ set foldmethod=syntax
 " => File Types
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au FileType c setlocal noexpandtab shiftwidth=8 tabstop=8 softtabstop=8 textwidth=79
+au FileType cpp setlocal noexpandtab shiftwidth=8 tabstop=8 softtabstop=8 textwidth=79
 au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 textwidth=79 foldmethod=indent nosmartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au FileType htmldjango setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType html setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType go setlocal noexpandtab
 au FileType snippets setlocal noexpandtab
-au FileType c set noexpandtab shiftwidth=8 tabstop=8 softtabstop=8 textwidth=80
 au FileType make set noexpandtab shiftwidth=8 tabstop=8 softtabstop=8
 
 
