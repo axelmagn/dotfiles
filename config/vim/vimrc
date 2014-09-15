@@ -42,7 +42,13 @@ Bundle 'gmarik/vundle'
 " Vundle managed plugins
 Bundle 'jpalardy/vim-slime'
 Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+Bundle "honza/vim-snippets"
+
+" disable this if it becomes a pain in the ass
+" Bundle 'takac/vim-hardtime'
 
 " Language support plugins
 Bundle 'digitaltoad/vim-jade'
@@ -69,6 +75,18 @@ let g:syntastic_mode_map = {    "mode": "active",
                            \    "passive_filetypes": ["java"] }
 
 let g:syntastic_java_checkers = ['javac']
+
+" hardtime config
+let g:list_of_normal_keys = [ "h", "j", "k", "l", "-", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>", "w", "W", "b", "B" ]
+
+" UltiSnips config
+let g:UltiSnipsExpandTrigger="<C-l>"
+let g:UltiSnipsJumpForwardTrigger="<C-b>"
+let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+
+" NerdCommenter config
+let NERDSpaceDelims=1
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -108,15 +126,14 @@ set cursorline
 " => File Types
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au FileType c setlocal noexpandtab shiftwidth=8 tabstop=8 softtabstop=8 textwidth=79
+au FileType cpp setlocal noexpandtab shiftwidth=8 tabstop=8 softtabstop=8 textwidth=79
 au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 textwidth=79 foldmethod=indent nosmartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au FileType htmldjango setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType html setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType go setlocal noexpandtab
 au FileType snippets setlocal noexpandtab
-au FileType c set noexpandtab shiftwidth=8 tabstop=8 softtabstop=8 textwidth=80
 au FileType make set noexpandtab shiftwidth=8 tabstop=8 softtabstop=8
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
