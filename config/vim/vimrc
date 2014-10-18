@@ -133,6 +133,7 @@ au FileType htmldjango setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType html setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType go setlocal noexpandtab
 au FileType snippets setlocal noexpandtab
+au FileType rust setlocal textwidth=79
 au FileType make set noexpandtab shiftwidth=8 tabstop=8 softtabstop=8
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
