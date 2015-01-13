@@ -5,5 +5,5 @@ elif [ "$COLORTERM" == "rxvt-xpm" ]
 then
     TERM=rxvt-256color
 else
-    TERM=xterm-16color
+    TERM=xterm-color
 fi
