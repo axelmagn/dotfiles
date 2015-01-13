@@ -9,6 +9,9 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# Remove title bar
+new_window 1pixel
+
 set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
