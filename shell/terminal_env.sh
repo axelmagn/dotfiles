@@ -1,3 +1,5 @@
+# commented out unless necessary
+: <<'END'
 if [ "$COLORTERM" == "gnome-terminal" ] || [ "$COLORTERM" == "xfce4-terminal" ]
 then
     TERM=xterm-256color
@@ -7,3 +9,4 @@ then
 else
     TERM=xterm-color
 fi
+END
