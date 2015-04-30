@@ -120,6 +120,9 @@ bindsym $mod+minus exec amixer -q set Master 4%- unmute
 for_window [class="Google-chrome" title="Google Chrome"] border none
 for_window [class="Chromium" title="Google Chrome"] border none
 
+# screenshot if scrot is installed
+bindsym --release $mod+Print exec --no-startup-id scrot $HOME/.screenshot.png
+
 # reload the configuration file
 bindsym $mod+Shift+C reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
