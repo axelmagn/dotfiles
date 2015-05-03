@@ -46,7 +46,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'Valloric/YouCompleteMe'
 Bundle "honza/vim-snippets"
 Plugin 'SirVer/ultisnips'
-Plugin "pangloss/vim-javascript"
+Plugin 'pangloss/vim-javascript'
 
 " disable this if it becomes a pain in the ass
 " Bundle 'takac/vim-hardtime'
