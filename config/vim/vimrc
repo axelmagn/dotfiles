@@ -59,6 +59,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tfnico/vim-gradle'
 Bundle 'fatih/vim-go'
 Plugin 'wting/rust.vim'
+Plugin 'vim-ruby/vim-ruby'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
