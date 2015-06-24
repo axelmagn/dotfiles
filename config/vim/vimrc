@@ -137,6 +137,8 @@ au FileType go setlocal noexpandtab
 au FileType snippets setlocal noexpandtab
 au FileType rust setlocal textwidth=79
 au FileType make set noexpandtab shiftwidth=8 tabstop=8 softtabstop=8
+au FileType rst set textwidth=79
+au FileType markdown set textwidth=79
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
