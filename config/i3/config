@@ -114,9 +114,12 @@ bindsym $mod+Shift+parenright move container to workspace 10
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 4%+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 4%- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
-bindsym $mod+equal exec amixer -q set Master 4%+ unmute
-bindsym $mod+minus exec amixer -q set Master 4%- unmute
-
+# bindsym $mod+equal exec amixer -q set Master 4%+ unmute
+# bindsym $mod+minus exec amixer -q set Master 4%- unmute
+ 
+# volume keys mapped to pulseaudio-ctl
+bindsym $mod+equal exec pulseaudio-ctl up
+bindsym $mod+minus exec pulseaudio-ctl down
 # Google chrome window fix
 for_window [class="Google-chrome" title="Google Chrome"] border none
 for_window [class="Chromium" title="Google Chrome"] border none
