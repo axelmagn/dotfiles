@@ -47,6 +47,9 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle "honza/vim-snippets"
 Plugin 'SirVer/ultisnips'
 Plugin 'pangloss/vim-javascript'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'wting/rust.vim'
+Plugin 'vim-ruby/vim-ruby'
 
 " disable this if it becomes a pain in the ass
 " Bundle 'takac/vim-hardtime'
@@ -58,8 +61,6 @@ Bundle 'cespare/vim-toml'
 Bundle 'tpope/vim-markdown'
 Bundle 'tfnico/vim-gradle'
 Bundle 'fatih/vim-go'
-Plugin 'wting/rust.vim'
-Plugin 'vim-ruby/vim-ruby'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
