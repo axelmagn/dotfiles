@@ -50,6 +50,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'wting/rust.vim'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'phildawes/racer'
 
 " disable this if it becomes a pain in the ass
 " Bundle 'takac/vim-hardtime'
