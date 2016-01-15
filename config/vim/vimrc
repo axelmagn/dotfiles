@@ -50,7 +50,9 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'wting/rust.vim'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'phildawes/racer'
+" Plugin 'phildawes/racer'
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'lervag/vimtex'
 
 " disable this if it becomes a pain in the ass
 " Bundle 'takac/vim-hardtime'
@@ -62,6 +64,7 @@ Bundle 'cespare/vim-toml'
 Bundle 'tpope/vim-markdown'
 Bundle 'tfnico/vim-gradle'
 Bundle 'fatih/vim-go'
+Plugin 'elixir-lang/vim-elixir'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -141,7 +144,7 @@ au FileType rust setlocal textwidth=79
 au FileType make set noexpandtab shiftwidth=8 tabstop=8 softtabstop=8
 au FileType rst set textwidth=79 
 au FileType markdown set textwidth=79
-au FileType tex set textwidth=89
+au FileType tex set textwidth=69
 au FileType javascript setlocal textwidth=120 expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType gitcommit setlocal textwidth=72
 
