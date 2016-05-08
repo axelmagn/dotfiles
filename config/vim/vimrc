@@ -141,7 +141,7 @@ au FileType rust setlocal textwidth=79
 au FileType make set noexpandtab shiftwidth=8 tabstop=8 softtabstop=8
 au FileType rst set textwidth=79 
 au FileType markdown set textwidth=79
-au FileType tex set textwidth=89
+au FileType tex set textwidth=69
 au FileType javascript setlocal textwidth=120 expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType gitcommit setlocal textwidth=72
 
