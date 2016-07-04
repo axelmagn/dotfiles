@@ -34,7 +34,8 @@ bindsym $mod+d exec dmenu_run
 # start a web browser
 # bindsym $mod+bar exec firefox
 # bindsym $mod+bar exec chrome
-bindsym $mod+bar exec google-chrome-stable
+# bindsym $mod+bar exec google-chrome-stable
+bindsym $mod+bar exec google-chrome-beta
 
 # change focus
 bindsym $mod+h focus left
