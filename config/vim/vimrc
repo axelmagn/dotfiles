@@ -52,7 +52,12 @@ Plugin 'wting/rust.vim'
 Plugin 'vim-ruby/vim-ruby'
 " Plugin 'phildawes/racer'
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
-Plugin 'lervag/vimtex'
+" Plugin 'vim-airline/vim-airline'
+
+" color schemes
+Plugin 'easysid/mod8.vim'
+Plugin 'joshdick/onedark.vim'
+Plugin 'flazz/vim-colorschemes'
 
 " disable this if it becomes a pain in the ass
 " Bundle 'takac/vim-hardtime'
@@ -65,6 +70,9 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tfnico/vim-gradle'
 Bundle 'fatih/vim-go'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'lervag/vimtex'
+Bundle 'nvie/vim-flake8'
+Plugin 'tmhedberg/SimpylFold'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -82,6 +90,7 @@ let g:syntastic_mode_map = {    "mode": "active",
                            \    "passive_filetypes": ["java"] }
 
 let g:syntastic_java_checkers = ['javac']
+let g:syntastic_python_checkers = ['flake8']
 
 " hardtime config
 let g:list_of_normal_keys = [ "h", "j", "k", "l", "-", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>", "w", "W", "b", "B" ]
@@ -94,6 +103,8 @@ let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 " NerdCommenter config
 let NERDSpaceDelims=1
 
+" Powerline
+let g:powerline_pycmd = "py3"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -138,6 +149,7 @@ au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 textw
 au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au FileType htmldjango setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType html setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
+au FileType jade setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType go setlocal noexpandtab
 au FileType snippets setlocal noexpandtab
 au FileType rust setlocal textwidth=79
@@ -210,7 +222,8 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 
-colorscheme desert
+" colorscheme desert
+colorscheme molokai
 set background=dark
 
 " Set extra options when running in GUI mode
@@ -220,6 +233,9 @@ if has("gui_running")
     set t_Co=256
     set guitablabel=%M\ %t
 endif
+
+" set 256color regardless
+set t_Co=256
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
