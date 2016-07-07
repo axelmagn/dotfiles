@@ -1,0 +1,3 @@
+*.stow.install
+/vim.stow/.vim
+.DS_Store
