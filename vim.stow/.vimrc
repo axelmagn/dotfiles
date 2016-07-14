@@ -65,12 +65,12 @@ Plugin 'vim-airline/vim-airline-themes'     " airline themes
 " Language Plugins
 Plugin 'cespare/vim-toml'       " TOML
 Plugin 'derekwyatt/vim-scala'   " Scala
+Plugin 'dylon/vim-antlr'        " Antlr
 Plugin 'elixir-lang/vim-elixir' " Elixir
 Plugin 'fatih/vim-go'           " Go
 Plugin 'lervag/vimtex'          " latex
 Plugin 'rust-lang/rust.vim'     " Rust
 Plugin 'tpope/vim-markdown'     " Markdown
-Plugin 'dylon/vim-antlr'        " Antlr
 
 " END vundle managed plugins
 call vundle#end()           " required
