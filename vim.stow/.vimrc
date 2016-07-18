@@ -128,6 +128,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 " use flake8 as python linter
 let g:syntastic_python_checkers = ['flake8']
+" disable latex checkers
+let g:syntastic_latex_checkers = []
+let g:syntastic_tex_checkers = []
+" turn of tex window box
+let g:syntastic_tex_chktex_showmsgs = 0
 
 """"""""""""""""""""""""""""""""""""""""
 " Solarized
@@ -145,6 +150,23 @@ let g:airline_powerline_fonts = 1
 " Tagline
 """"""""""""""""""""""""""""""""""""""""
 map  <leader>t :TagbarToggle<CR>
+
+
+""""""""""""""""""""""""""""""""""""""""
+" LaTeX
+""""""""""""""""""""""""""""""""""""""""
+let g:Tex_IgnoredWarnings = 
+    \'Underfull'."\n".
+    \'Overfull'."\n".
+    \'specifier changed to'."\n".
+    \'You have requested'."\n".
+    \'Missing number, treated as zero.'."\n".
+    \'There were undefined references'."\n".
+    \'Citation %.%# undefined'."\n".
+    \'Double space found.'."\n".
+	\'Wrong length of dash may have been used.'."\n"
+let g:Tex_IgnoreLevel = 9
+let g:Tex_GotoError = 0
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
