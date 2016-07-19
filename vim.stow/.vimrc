@@ -131,6 +131,8 @@ let g:syntastic_python_checkers = ['flake8']
 " disable latex checkers
 let g:syntastic_latex_checkers = []
 let g:syntastic_tex_checkers = []
+" set rst checker to sphinx
+let g:syntastic_rst_checkers = ['sphinx']
 " turn of tex window box
 let g:syntastic_tex_chktex_showmsgs = 0
 
