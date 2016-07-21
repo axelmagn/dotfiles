@@ -50,6 +50,7 @@ Plugin 'bling/vim-airline'              " tabline
 Plugin 'christoomey/vim-tmux-navigator' " easy tmux navigation
 Plugin 'ervandew/supertab'              " tab completion
 Plugin 'kien/ctrlp.vim'                 " Fuzzy finder (<C-p>)
+Plugin 'kien/rainbow_parentheses.vim'   " pretty nested parens
 Plugin 'majutsushi/tagbar'              " class outline viewer 
 Plugin 'scrooloose/nerdcommenter'       " commenting utility
 Plugin 'scrooloose/nerdtree'            " file tree (<leader>n)
@@ -63,14 +64,16 @@ Plugin 'tomasr/molokai'                     " Molokai
 Plugin 'vim-airline/vim-airline-themes'     " airline themes
 
 " Language Plugins
-Plugin 'cespare/vim-toml'       " TOML
-Plugin 'derekwyatt/vim-scala'   " Scala
-Plugin 'dylon/vim-antlr'        " Antlr
-Plugin 'elixir-lang/vim-elixir' " Elixir
-Plugin 'fatih/vim-go'           " Go
-Plugin 'lervag/vimtex'          " latex
-Plugin 'rust-lang/rust.vim'     " Rust
-Plugin 'tpope/vim-markdown'     " Markdown
+Plugin 'cespare/vim-toml'           " TOML
+Plugin 'derekwyatt/vim-scala'       " Scala
+Plugin 'dylon/vim-antlr'            " Antlr
+Plugin 'elixir-lang/vim-elixir'     " Elixir
+Plugin 'fatih/vim-go'               " Go
+Plugin 'guns/vim-clojure-highlight' " Clojure Advanced Highlighting
+Plugin 'guns/vim-clojure-static'    " Clojure
+Plugin 'lervag/vimtex'              " latex
+Plugin 'rust-lang/rust.vim'         " Rust
+Plugin 'tpope/vim-markdown'         " Markdown
 
 " END vundle managed plugins
 call vundle#end()           " required
