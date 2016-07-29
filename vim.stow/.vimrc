@@ -64,16 +64,18 @@ Plugin 'tomasr/molokai'                     " Molokai
 Plugin 'vim-airline/vim-airline-themes'     " airline themes
 
 " Language Plugins
-Plugin 'cespare/vim-toml'           " TOML
-Plugin 'derekwyatt/vim-scala'       " Scala
-Plugin 'dylon/vim-antlr'            " Antlr
-Plugin 'elixir-lang/vim-elixir'     " Elixir
-Plugin 'fatih/vim-go'               " Go
-Plugin 'guns/vim-clojure-highlight' " Clojure Advanced Highlighting
-Plugin 'guns/vim-clojure-static'    " Clojure
-Plugin 'lervag/vimtex'              " latex
-Plugin 'rust-lang/rust.vim'         " Rust
-Plugin 'tpope/vim-markdown'         " Markdown
+Plugin 'cespare/vim-toml'                   " TOML
+Plugin 'derekwyatt/vim-scala'               " Scala
+Plugin 'dylon/vim-antlr'                    " Antlr
+Plugin 'elixir-lang/vim-elixir'             " Elixir
+Plugin 'fatih/vim-go'                       " Go
+Plugin 'guns/vim-clojure-highlight'         " Clojure Advanced Highlighting
+Plugin 'guns/vim-clojure-static'            " Clojure
+Plugin 'lervag/vimtex'                      " latex
+Plugin 'rust-lang/rust.vim'                 " Rust
+Plugin 'tpope/vim-fireplace'                " Clojure REPL
+Plugin 'tpope/vim-markdown'                 " Markdown
+Plugin 'mustache/vim-mustache-handlebars'   " Mustache
 
 " END vundle managed plugins
 call vundle#end()           " required
