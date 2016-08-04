@@ -138,6 +138,8 @@ let g:syntastic_latex_checkers = []
 let g:syntastic_tex_checkers = []
 " set rst checker to sphinx
 let g:syntastic_rst_checkers = ['sphinx']
+" set js linter to eslint
+let g:syntastic_javascript_checkers = ['eslint']
 " turn of tex window box
 let g:syntastic_tex_chktex_showmsgs = 0
 
