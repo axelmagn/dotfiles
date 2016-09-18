@@ -57,6 +57,7 @@ Plugin 'scrooloose/nerdtree'            " file tree (<leader>n)
 Plugin 'scrooloose/syntastic'           " syntax checking
 Plugin 'tpope/vim-fugitive'             " Git wrapper
 Plugin 'tpope/vim-surround'             " quoting/parenthesizing utility
+Plugin 'shougo/vimproc.vim'             " async execution
 
 " Colorscheme Plugins
 Plugin 'altercation/vim-colors-solarized'   " Solarized
@@ -76,6 +77,15 @@ Plugin 'rust-lang/rust.vim'                 " Rust
 Plugin 'tpope/vim-fireplace'                " Clojure REPL
 Plugin 'tpope/vim-markdown'                 " Markdown
 Plugin 'mustache/vim-mustache-handlebars'   " Mustache
+Plugin 'leafgarland/typescript-vim'         " Typescript Syntax
+Plugin 'Quramy/tsuquyomi'                   " Typescript omnicomplete
+Plugin 'pangloss/vim-javascript'            " javascript syntax
+Plugin 'mxw/vim-jsx'                        " JSX javascript
+Plugin 'tpope/vim-haml'                     " HAML / SASS / SCSS
+Plugin 'gorodinskiy/vim-coloresque'         " CSS color preview
+
+
+
 
 " END vundle managed plugins
 call vundle#end()           " required
@@ -124,9 +134,9 @@ autocmd bufenter * if (winnr("$") == 1
 " (see statusline section)
 
 " populate the location-list with the errors found by the checkers
-let g:syntastic_always_populate_loc_list = 1    
+let g:syntastic_always_populate_loc_list = 0
 " automatically open/close error window when errors are detected/empty
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 0
 " run syntax checks when buffers are first loaded
 let g:syntastic_check_on_open = 1
 " don't run syntax checks when quitting (pointless)
@@ -139,7 +149,8 @@ let g:syntastic_tex_checkers = []
 " set rst checker to sphinx
 let g:syntastic_rst_checkers = ['sphinx']
 " set js linter to eslint
-let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['jsxhint']
 " turn of tex window box
 let g:syntastic_tex_chktex_showmsgs = 0
 
@@ -177,6 +188,16 @@ let g:Tex_IgnoredWarnings =
 let g:Tex_IgnoreLevel = 9
 let g:Tex_GotoError = 0
 
+""""""""""""""""""""""""""""""""""""""""
+" Typescript
+""""""""""""""""""""""""""""""""""""""""
+let g:syntastic_typescript_tsc_fname = ''
+
+""""""""""""""""""""""""""""""""""""""""
+" Typescript
+""""""""""""""""""""""""""""""""""""""""
+let g:jsx_ext_required = 0
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => File Types
@@ -194,11 +215,12 @@ au FileType coffee      setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
 au FileType htmldjango  setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType html        setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType jade        setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
+au FileType yaml        setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType go          setlocal noexpandtab
 au FileType snippets    setlocal noexpandtab
 au FileType make        setlocal noexpandtab shiftwidth=8 tabstop=8 
                         \ softtabstop=8
-au FileType javascript  setlocal textwidth=120 expandtab shiftwidth=2 tabstop=8 softtabstop=2
+au FileType javascript  setlocal textwidth=80 expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType gitcommit setlocal textwidth=72
 
 au BufRead,BufNewFile *.tex set filetype=tex
