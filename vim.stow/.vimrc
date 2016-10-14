@@ -30,10 +30,10 @@
 " => Vundle
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Disable Vi compatibility. 
+" Disable Vi compatibility.
 " Required for vundle (and generally a good idea)
-set nocompatible 
-filetype off        " required 
+set nocompatible
+filetype off        " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -51,7 +51,7 @@ Plugin 'christoomey/vim-tmux-navigator' " easy tmux navigation
 Plugin 'ervandew/supertab'              " tab completion
 Plugin 'kien/ctrlp.vim'                 " Fuzzy finder (<C-p>)
 Plugin 'kien/rainbow_parentheses.vim'   " pretty nested parens
-Plugin 'majutsushi/tagbar'              " class outline viewer 
+Plugin 'majutsushi/tagbar'              " class outline viewer
 Plugin 'scrooloose/nerdcommenter'       " commenting utility
 Plugin 'scrooloose/nerdtree'            " file tree (<leader>n)
 Plugin 'scrooloose/syntastic'           " syntax checking
@@ -61,7 +61,7 @@ Plugin 'shougo/vimproc.vim'             " async execution
 
 " Colorscheme Plugins
 Plugin 'altercation/vim-colors-solarized'   " Solarized
-Plugin 'tomasr/molokai'                     " Molokai 
+Plugin 'tomasr/molokai'                     " Molokai
 Plugin 'vim-airline/vim-airline-themes'     " airline themes
 
 " Language Plugins
@@ -83,6 +83,7 @@ Plugin 'pangloss/vim-javascript'            " javascript syntax
 Plugin 'mxw/vim-jsx'                        " JSX javascript
 Plugin 'tpope/vim-haml'                     " HAML / SASS / SCSS
 Plugin 'gorodinskiy/vim-coloresque'         " CSS color preview
+Plugin 'neo4j-contrib/cypher-vim-syntax'    " Neo4j Cypther
 
 
 
@@ -94,7 +95,7 @@ call vundle#end()           " required
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General Configuration
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" These high-level settings are very important but don't 
+" These high-level settings are very important but don't
 " really fit anywhere else.
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Set how many lines vim should remember
@@ -123,8 +124,8 @@ nmap <leader>w :w!<cr>
 " open NERD Tree with <C-n>
 map <leader>n :NERDTreeToggle<CR>
 " close vim if NERDTree is the only thing open
-autocmd bufenter * if (winnr("$") == 1 
-                     \ && exists("b:NERDTree") 
+autocmd bufenter * if (winnr("$") == 1
+                     \ && exists("b:NERDTree")
                      \ && b:NERDTree.isTabTree()) | q | endif
 
 """"""""""""""""""""""""""""""""""""""""
@@ -175,7 +176,7 @@ map  <leader>t :TagbarToggle<CR>
 """"""""""""""""""""""""""""""""""""""""
 " LaTeX
 """"""""""""""""""""""""""""""""""""""""
-let g:Tex_IgnoredWarnings = 
+let g:Tex_IgnoredWarnings =
     \'Underfull'."\n".
     \'Overfull'."\n".
     \'specifier changed to'."\n".
@@ -202,15 +203,15 @@ let g:jsx_ext_required = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => File Types
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-au FileType c           setlocal noexpandtab shiftwidth=8 tabstop=8 
+au FileType c           setlocal noexpandtab shiftwidth=8 tabstop=8
                         \ softtabstop=8 textwidth=79
-au FileType cpp         setlocal noexpandtab shiftwidth=8 tabstop=8 
+au FileType cpp         setlocal noexpandtab shiftwidth=8 tabstop=8
                         \ softtabstop=8 textwidth=120
-au FileType python      setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 
-                        \ textwidth=79 foldmethod=indent nosmartindent 
+au FileType python      setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
+                        \ textwidth=79 foldmethod=indent nosmartindent
                         \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-au FileType coffee      setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 
-                        \ smartindent 
+au FileType coffee      setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
+                        \ smartindent
                         \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au FileType htmldjango  setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType html        setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
@@ -218,7 +219,7 @@ au FileType jade        setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType yaml        setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType go          setlocal noexpandtab
 au FileType snippets    setlocal noexpandtab
-au FileType make        setlocal noexpandtab shiftwidth=8 tabstop=8 
+au FileType make        setlocal noexpandtab shiftwidth=8 tabstop=8
                         \ softtabstop=8
 au FileType javascript  setlocal textwidth=80 expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType gitcommit setlocal textwidth=72
@@ -235,11 +236,17 @@ au BufRead,BufNewFile *.g4 set filetype=antlr4
 " Turn on mouse compatibility.  Look at us being all modern
 set mouse=a
 
+" Display trailing whitespace
+set list
+set listchars=tab:→·,trail:·
+highlight TrailS ctermbg=red ctermfg=white guibg=#592929
+match TrailS /\s\+$/
+
 " default fold method
 set foldmethod=syntax
 
 " Cursor line and column
-set cursorline 
+set cursorline
 
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
@@ -266,7 +273,7 @@ set whichwrap+=<,>,h,l
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
 " Highlight search results
@@ -382,7 +389,7 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" Specify the behavior when switching between buffers 
+" Specify the behavior when switching between buffers
 try
   set switchbuf=useopen,usetab,newtab
   set showtabline=2
