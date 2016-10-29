@@ -84,8 +84,9 @@ Plugin 'mxw/vim-jsx'                        " JSX javascript
 Plugin 'tpope/vim-haml'                     " HAML / SASS / SCSS
 Plugin 'gorodinskiy/vim-coloresque'         " CSS color preview
 Plugin 'neo4j-contrib/cypher-vim-syntax'    " Neo4j Cypther
-
-
+Plugin 'raichoo/purescript-vim'             " Purescript
+Plugin 'eagletmt/ghcmod-vim'                " Haskell syntax
+Plugin 'eagletmt/neco-ghc'                  " Haskell autocomplete
 
 
 " END vundle managed plugins
@@ -112,6 +113,10 @@ let g:mapleader = ","
 
 " Fast saving with ,w
 nmap <leader>w :w!<cr>
+
+" read project-specific vimrc
+set exrc
+set secure  " disable unsafe commands in external vimrc
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""

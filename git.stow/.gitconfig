@@ -9,7 +9,7 @@
     ui = auto
 
 [push]
-    default = matching
+    default = simple
 
 [core]
     editor = vim
@@ -29,3 +29,6 @@
 
 [gpg]
     program = gpg2
+
+[merge]
+    conflictstyle = diff3
