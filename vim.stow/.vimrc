@@ -85,8 +85,9 @@ Plugin 'tpope/vim-haml'                     " HAML / SASS / SCSS
 Plugin 'gorodinskiy/vim-coloresque'         " CSS color preview
 Plugin 'neo4j-contrib/cypher-vim-syntax'    " Neo4j Cypther
 Plugin 'raichoo/purescript-vim'             " Purescript
-Plugin 'eagletmt/ghcmod-vim'                " Haskell syntax
+Plugin 'eagletmt/ghcmod-vim'                " Haskell linting
 Plugin 'eagletmt/neco-ghc'                  " Haskell autocomplete
+Plugin 'lukerandall/haskellmode-vim'        " Haskell highlighting
 
 
 " END vundle managed plugins
@@ -200,10 +201,15 @@ let g:Tex_GotoError = 0
 let g:syntastic_typescript_tsc_fname = ''
 
 """"""""""""""""""""""""""""""""""""""""
-" Typescript
+" JSX
 """"""""""""""""""""""""""""""""""""""""
 let g:jsx_ext_required = 0
 
+""""""""""""""""""""""""""""""""""""""""
+" Haskell
+""""""""""""""""""""""""""""""""""""""""
+let g:ghc="/usr/local/bin/ghc"
+let g:haddock_browser="/usr/bin/open"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => File Types
@@ -227,12 +233,16 @@ au FileType snippets    setlocal noexpandtab
 au FileType make        setlocal noexpandtab shiftwidth=8 tabstop=8
                         \ softtabstop=8
 au FileType javascript  setlocal textwidth=80 expandtab shiftwidth=2 tabstop=8 softtabstop=2
+au FileType haskell     setlocal textwidth=78 expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType gitcommit setlocal textwidth=72
 
 au BufRead,BufNewFile *.tex set filetype=tex
 
 au BufRead,BufNewFile *.g set filetype=antlr3
 au BufRead,BufNewFile *.g4 set filetype=antlr4
+
+au BufEnter *.hs compiler ghc
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
