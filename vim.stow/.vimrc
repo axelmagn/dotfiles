@@ -234,7 +234,8 @@ au FileType make        setlocal noexpandtab shiftwidth=8 tabstop=8
                         \ softtabstop=8
 au FileType javascript  setlocal textwidth=80 expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType haskell     setlocal textwidth=78 expandtab shiftwidth=2 tabstop=8 softtabstop=2
-au FileType gitcommit setlocal textwidth=72
+au FileType purescript  setlocal textwidth=78 expandtab shiftwidth=2 tabstop=8 softtabstop=2
+au FileType gitcommit   setlocal textwidth=72
 
 au BufRead,BufNewFile *.tex set filetype=tex
 
