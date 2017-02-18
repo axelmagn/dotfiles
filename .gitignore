@@ -1,3 +1,4 @@
 *.stow.install
+*.pkgs.install
 /vim.stow/.vim
 .DS_Store
