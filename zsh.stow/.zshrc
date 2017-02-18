@@ -9,6 +9,10 @@ setopt share_history
 setopt extended_history
 setopt prompt_subst
 
+# use emacs editing mode
+set -o emacs
+
+# useful aliases
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias sudo='sudo -E'
@@ -26,7 +30,7 @@ prompt_char() {
     fi
     echo "%%"
 }
-PROMPT='(@%m)(%1~)$(prompt_char) '
+PROMPT="%{$fg[green]%}%B@%m%{$reset_color%}:%{$fg[blue]%}%B%1~%{$reset_color%}%b\$(prompt_char) "
 rprompt_precmd() {
     if [ $? -ne 0 ]; then
         RPROMPT="(%{$fg[red]%}%?%{$reset_color%})"
