@@ -16,6 +16,7 @@ set -o emacs
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias sudo='sudo -E'
+alias ncmp='ncmpcpp'
 
 prompt_char() {
     branch=`git branch 2> /dev/null | grep \* | awk '{print $2}'`
