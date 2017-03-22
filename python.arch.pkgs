@@ -1,4 +1,5 @@
-python
+autopep8
 flake8
+python
 python-virtualenv
 python-virtualenvwrapper

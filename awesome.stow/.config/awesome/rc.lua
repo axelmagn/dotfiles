@@ -48,7 +48,8 @@ beautiful.init(awful.util.get_themes_dir() .. "zenburn/theme.lua")
 -- terminal = "xterm"
 terminal = "terminator"
 file_manager = "nautilus"
-browser = os.getenv("BROWSER") or "firefox"
+-- browser = os.getenv("BROWSER") or "firefox"
+browser = os.getenv("BROWSER") or "google-chrome-stable"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 

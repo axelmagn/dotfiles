@@ -44,6 +44,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Behavior Plugins
+Plugin 'Chiel92/vim-autoformat'         " Automatic formatter
 Plugin 'Xuyuanp/nerdtree-git-plugin'    " show git status in file tree
 Plugin 'airblade/vim-gitgutter'         " Git changes show up in gutter
 Plugin 'bling/vim-airline'              " tabline
@@ -54,10 +55,12 @@ Plugin 'kien/rainbow_parentheses.vim'   " pretty nested parens
 Plugin 'majutsushi/tagbar'              " class outline viewer
 Plugin 'scrooloose/nerdcommenter'       " commenting utility
 Plugin 'scrooloose/nerdtree'            " file tree (<leader>n)
-Plugin 'scrooloose/syntastic'           " syntax checking
+" Plugin 'scrooloose/syntastic'         " syntax checking
+Plugin 'neomake/neomake'                " syntax checking
+Plugin 'shougo/vimproc.vim'             " async execution
 Plugin 'tpope/vim-fugitive'             " Git wrapper
 Plugin 'tpope/vim-surround'             " quoting/parenthesizing utility
-Plugin 'shougo/vimproc.vim'             " async execution
+" Plugin 'AutoComplPop'                   " open completion menu by default
 
 " Colorscheme Plugins
 Plugin 'altercation/vim-colors-solarized'   " Solarized
@@ -118,6 +121,9 @@ nmap <leader>w :w!<cr>
 " read project-specific vimrc
 set exrc
 set secure  " disable unsafe commands in external vimrc
+
+" omnicompletion
+set completeopt=longest,menuone
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -210,6 +216,19 @@ let g:jsx_ext_required = 0
 """"""""""""""""""""""""""""""""""""""""
 let g:ghc="/usr/local/bin/ghc"
 let g:haddock_browser="/usr/bin/open"
+let g:haskellmode_completion_ghc = 0
+let g:necoghc_enable_detailed_browse = 1
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+
+
+""""""""""""""""""""""""""""""""""""""""
+" Rust
+""""""""""""""""""""""""""""""""""""""""
+" (now handled by autoformat)
+" let g:rustfmt_autosave = 1
+
+" neomake command
+autocmd! BufWritePost *.rs NeomakeProject cargo
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => File Types
@@ -226,6 +245,7 @@ au FileType coffee      setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
                         \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au FileType htmldjango  setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType html        setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
+au FileType xml         setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType jade        setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType yaml        setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType go          setlocal noexpandtab
@@ -233,8 +253,8 @@ au FileType snippets    setlocal noexpandtab
 au FileType make        setlocal noexpandtab shiftwidth=8 tabstop=8
                         \ softtabstop=8
 au FileType javascript  setlocal textwidth=80 expandtab shiftwidth=2 tabstop=8 softtabstop=2
-au FileType haskell     setlocal textwidth=78 expandtab shiftwidth=2 tabstop=8 softtabstop=2
-au FileType purescript  setlocal textwidth=78 expandtab shiftwidth=2 tabstop=8 softtabstop=2
+au FileType haskell     setlocal textwidth=80 expandtab shiftwidth=2 tabstop=8 softtabstop=2
+au FileType purescript  setlocal textwidth=80 expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType gitcommit   setlocal textwidth=72
 
 au BufRead,BufNewFile *.tex set filetype=tex
@@ -243,6 +263,9 @@ au BufRead,BufNewFile *.g set filetype=antlr3
 au BufRead,BufNewFile *.g4 set filetype=antlr4
 
 au BufEnter *.hs compiler ghc
+
+" Autoformat files
+au BufWrite *.py,*.rs :Autoformat
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
