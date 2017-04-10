@@ -1,0 +1,4 @@
+#!/bin/bash
+NCHARS=${1:-5}
+RANGE=${2:-'a-zA-Z0-9'}
+cat /dev/urandom | tr -dc $RANGE | fold -w $NCHARS | head -n1
