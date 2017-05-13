@@ -16,13 +16,15 @@ set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font pango:DejaVu Sans Mono 8
+font pango:inconsolata 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec terminator
 # exec export TERM=gnome-teminal
 
 # kill focused window
@@ -35,7 +37,7 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+bar exec firefox
 # bindsym $mod+bar exec chrome
 # bindsym $mod+bar exec google-chrome-stable
-bindsym $mod+bar exec google-chrome-beta
+bindsym $mod+bar exec google-chrome-stable
 
 # change focus
 bindsym $mod+h focus left
@@ -165,7 +167,7 @@ bindsym $mod+r mode "resize"
 exec --no-startup-id xsetroot -solid "#111111"
 
 # default background
-exec --no-startup-id feh --bg-fill $HOME/.backgrounds/astronaut_on_fire.jpg
+exec --no-startup-id feh --bg-fill $HOME/.backgrounds/tree_watefall.jpg
 
 # random background
 exec --no-startup-id feh --bg-max $(find $HOME/.backgrounds/|shuf -n1)
