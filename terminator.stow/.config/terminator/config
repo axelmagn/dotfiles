@@ -1,3 +1,18 @@
 [global_config]
-    focus = system
-    borderless = true
+  focus = system
+  borderless = True
+[keybindings]
+[profiles]
+  [[default]]
+    background_image = None
+    icon_bell = False
+    show_titlebar = False
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
