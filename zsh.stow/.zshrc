@@ -18,6 +18,7 @@ alias grep='grep --color=auto'
 alias sudo='sudo -E'
 alias ncmp='ncmpcpp'
 alias ll='ls -l'
+alias la='ls -al'
 alias tmux="TERM=screen-256color-bce tmux"
 
 prompt_char() {

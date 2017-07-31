@@ -1,5 +1,5 @@
 export EDITOR='vim'
-eval $(dircolors "$HOME/.config/DIR_COLORS")
+# eval $(dircolors "$HOME/.config/DIR_COLORS")
 
 for i in $HOME/.profile.d/*.sh ; do
     if [ -r "$i" ]; then

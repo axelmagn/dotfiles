@@ -1,1 +1,3 @@
---file ~/.local/share/ledger/axelmagn.journal
+--strict
+--explicit
+--file ~/Workspace/personal/finance/axelmagn.ledger

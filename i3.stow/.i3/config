@@ -119,6 +119,9 @@ bindsym XF86AudioLowerVolume exec amixer -q set Master 4%- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
 # bindsym $mod+equal exec amixer -q set Master 4%+ unmute
 # bindsym $mod+minus exec amixer -q set Master 4%- unmute
+
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
  
 # volume keys mapped to pulseaudio-ctl
 bindsym $mod+equal exec pulseaudio-ctl up

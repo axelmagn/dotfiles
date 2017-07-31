@@ -91,6 +91,8 @@ Plugin 'raichoo/purescript-vim'             " Purescript
 Plugin 'eagletmt/ghcmod-vim'                " Haskell linting
 Plugin 'eagletmt/neco-ghc'                  " Haskell autocomplete
 Plugin 'lukerandall/haskellmode-vim'        " Haskell highlighting
+Plugin 'ledger/vim-ledger'                  " Ledger Syntax
+Plugin 'wlangstroth/vim-racket'             " Racket
 
 
 " END vundle managed plugins
@@ -228,7 +230,7 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 " let g:rustfmt_autosave = 1
 
 " neomake command
-autocmd! BufWritePost *.rs NeomakeProject cargo
+" autocmd! BufWritePost *.rs NeomakeProject cargo
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => File Types
