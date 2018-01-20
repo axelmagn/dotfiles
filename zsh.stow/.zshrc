@@ -35,6 +35,7 @@ prompt_char() {
     echo "%%"
 }
 PROMPT="%{$fg[blue]%}%B%n%{$fg[red]%}@%{$fg[green]%}%m%{$reset_color%}:%{$fg[blue]%}%B%1~%{$reset_color%}%b\$(prompt_char) "
+PS1="${PROMPT}"
 rprompt_precmd() {
     if [ $? -ne 0 ]; then
         RPROMPT="(%{$fg[red]%}%?%{$reset_color%})"
@@ -43,3 +44,6 @@ rprompt_precmd() {
     fi
 }
 precmd_functions+=(rprompt_precmd)
+
+source ${HOME}/.zshenv
+

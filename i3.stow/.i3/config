@@ -168,15 +168,18 @@ bindsym $mod+r mode "resize"
 
 # background color if all else fails
 exec --no-startup-id xsetroot -solid "#111111"
+exec --no-startup-id xrandr --dpi 200
 
 # default background
-exec --no-startup-id feh --bg-fill $HOME/.backgrounds/tree_watefall.jpg
+# exec --no-startup-id feh --bg-fill $HOME/.backgrounds/tree_watefall.jpg
+exec --no-startup-id feh --bg-fill $HOME/.backgrounds/mikael-gustafsson.jpg
+# exec --no-startup-id feh --bg-fill $HOME/.backgrounds/5-centimeters-per-second-wallpaper-5.jpg
 
 # random background
-exec --no-startup-id feh --bg-max $(find $HOME/.backgrounds/|shuf -n1)
+# exec --no-startup-id feh --bg-max $(find $HOME/.backgrounds/|shuf -n1)
 
 bindsym $mod+grave exec --no-startup-id feh --bg-max $(find $HOME/.backgrounds/|shuf -n1)
-bindsym $mod+Shift+grave exec $HOME/bin/lock
+bindsym $mod+Shift+grave exec $HOME/.local/bin/lock
 
 # stop nautilus from spawning a desktop window
 exec --no-startup-id gsettings set org.gnome.desktop.background show-desktop-icons false

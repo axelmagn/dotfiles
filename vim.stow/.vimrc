@@ -1,5 +1,4 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " VIM Configuration
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -93,6 +92,8 @@ Plugin 'eagletmt/neco-ghc'                  " Haskell autocomplete
 Plugin 'lukerandall/haskellmode-vim'        " Haskell highlighting
 Plugin 'ledger/vim-ledger'                  " Ledger Syntax
 Plugin 'wlangstroth/vim-racket'             " Racket
+Plugin 'sebastianmarkow/deoplete-rust'      " rust deoplete
+Plugin 'vim-scripts/ebnf.vim'               " Extended Backus-Naur Form
 
 
 " END vundle managed plugins
@@ -250,12 +251,14 @@ au FileType html        setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType xml         setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType jade        setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType yaml        setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
+au FileType racket      setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType go          setlocal noexpandtab
 au FileType snippets    setlocal noexpandtab
 au FileType make        setlocal noexpandtab shiftwidth=8 tabstop=8
                         \ softtabstop=8
 au FileType javascript  setlocal textwidth=80 expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType haskell     setlocal textwidth=80 expandtab shiftwidth=2 tabstop=8 softtabstop=2
+au FileType cabal       setlocal textwidth=80 expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType purescript  setlocal textwidth=80 expandtab shiftwidth=2 tabstop=8 softtabstop=2
 au FileType gitcommit   setlocal textwidth=72
 
@@ -263,6 +266,9 @@ au BufRead,BufNewFile *.tex set filetype=tex
 
 au BufRead,BufNewFile *.g set filetype=antlr3
 au BufRead,BufNewFile *.g4 set filetype=antlr4
+au BufRead,BufNewFile *.lalrpop set filetype=rust
+au BufRead,BufNewFile *.pest set filetype=rust
+au BufRead,BufNewFile *.fcl set filetype=toml
 
 au BufEnter *.hs compiler ghc
 
