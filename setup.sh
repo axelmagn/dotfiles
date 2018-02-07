@@ -184,7 +184,7 @@ function install_package {
     local stowdir="stow"
     if [ -d "${stowdir}" ]; then
         echo "  INSTALLING: ${stowdir}"
-        stow --target="${opt_target}" --restow "${stowdir}"
+        stow --target="${opt_target}" "${stowdir}"
     else
         echo "  NOT FOUND: ${stowdir}"
     fi
