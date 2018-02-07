@@ -176,12 +176,14 @@ function install_packages {
 }
 
 function setup_directories {
+    pushd "${HOME}"
     mkdir -p \
         .profile.d \
         .rc.d \
         .local \
         .config \
         .cache
+    popd
 }
 
 function install_package {
