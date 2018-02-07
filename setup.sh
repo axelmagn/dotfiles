@@ -1,5 +1,5 @@
 #!/bin/bash
-readonly DEBUG=true
+readonly DEBUG=${DEBUG:-false}
 
 if [ ${DEBUG} ]; then
     set -exuo pipefail
