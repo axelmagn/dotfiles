@@ -103,6 +103,9 @@ function main {
         esac
     fi
 
+    # set up directories
+    setup_directories
+
     # install dotfile packages
     install_packages
 }
@@ -170,6 +173,15 @@ function install_packages {
     for pkg in ${arg_packages}; do
         install_package "${pkg}"
     done
+}
+
+function setup_directories {
+    mkdir -p \
+        .profile.d \
+        .rc.d \
+        .local \
+        .config \
+        .cache
 }
 
 function install_package {
