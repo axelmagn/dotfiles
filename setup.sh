@@ -96,11 +96,13 @@ function main {
     # install setup dependencies
     if [ ! ${opt_reinstall} = true ]; then
         local deps="$(get_dependencies)"
-        case "${opt_distro}" in
-            debian ) sudo apt-get install ${deps} ;;
-            gentoo ) sudo emerge -au ${deps} ;;
-            * ) error_exit "unrecognized distribution - '${opt_distro}'.\ncould not install setup dependencies"
-        esac
+        if [ ! ${deps} = "" ]; then
+            case "${opt_distro}" in
+                debian ) sudo apt-get install ${deps} ;;
+                gentoo ) sudo emerge -au ${deps} ;;
+                * ) error_exit "unrecognized distribution - '${opt_distro}'.\ncould not install setup dependencies"
+            esac
+        fi
     fi
 
     # set up directories
