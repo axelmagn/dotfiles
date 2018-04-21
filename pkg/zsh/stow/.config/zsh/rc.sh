@@ -57,3 +57,14 @@ for i in ${HOME}/.rc.d/*.sh ; do
     fi
 done
 unset i
+
+# source zprofile because I don't like the inconsistency
+i="${HOME}/.zprofile"
+if [ -r "$i" ]; then
+     if [ "${-#*i}" != "$-" ]; then
+        source "$i"
+    else
+        source "$i" >/dev/null 2>&1
+    fi
+fi
+unset i
