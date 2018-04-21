@@ -1,4 +1,5 @@
 *.stow.install
 *.pkgs.install
 /vim.stow/.vim
+.netrwhist
 .DS_Store
