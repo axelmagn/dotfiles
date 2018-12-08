@@ -12,7 +12,7 @@ readonly BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 readonly SHORTOPTS="hd:p:rt"
 readonly LONGOPTS="help,distro:profile:reinstall,target"
 
-readonly DISTROS=(debian gentoo)
+readonly DISTROS=(debian gentoo manjaro)
 readonly PROFILES=$(for f in "${BASE_DIR}"/profile/*; do basename $f; done | tr '\n' ' ')
 
 readonly USAGE="
@@ -98,9 +98,10 @@ function main {
         local deps="$(get_dependencies)"
         if [ ! ${deps} = "" ]; then
             case "${opt_distro}" in
-                debian ) sudo apt-get install ${deps} ;;
-                gentoo ) sudo emerge -au ${deps} ;;
-                * ) error_exit "unrecognized distribution - '${opt_distro}'.\ncould not install setup dependencies"
+                debian )  sudo apt-get install ${deps} ;;
+                gentoo )  sudo emerge -au ${deps} ;;
+                manjaro ) sudo pacman -S ${deps} ;;
+                * )       error_exit "unrecognized distribution - '${opt_distro}'.\ncould not install setup dependencies"
             esac
         fi
     fi
