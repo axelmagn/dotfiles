@@ -11,3 +11,5 @@ for i in ${HOME}/.profile.d/*.sh ; do
     fi
 done
 unset i
+
+export PATH="$HOME/.cargo/bin:$PATH"

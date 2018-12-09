@@ -19,6 +19,7 @@ Plug 'tpope/vim-sensible'               " Tim Pope's sensible vim configs
 Plug 'Shougo/denite.nvim'                                       " unite buffer
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }   " completion
 Plug 'christoomey/vim-tmux-navigator'                           " easy tmux navigation
+Plug 'luochen1990/rainbow'                                      " rainbow parens
 Plug 'vim-airline/vim-airline'                                  " airline themes
 Plug 'vim-airline/vim-airline-themes'                           " airline themes
 Plug 'w0rp/ale'                                                 " linting and autoformatting
@@ -30,6 +31,7 @@ Plug 'nbouscal/vim-stylish-haskell'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'sebastianmarkow/deoplete-rust'
+Plug 'wlangstroth/vim-racket'
 
 " color schemes
 Plug 'tomasr/molokai'                     " Molokai
@@ -80,6 +82,9 @@ let g:rustfmt_autosave = 1                                                      
 let g:rust_clip_command = 'xclip -selection clipboard'                                  " for playpen integration
 let g:deoplete#sources#rust#racer_binary = '/home/axelmagn/.cargo/bin/racer'            " autocompleter
 let g:deoplete#sources#rust#racer_binary = '/home/axelmagn/Workspace/third_party/rust' " autocompleter
+
+" enable rainbow parens
+let g:rainbow_active = 1
 
 " ALE
 let g:ale_linters = {
