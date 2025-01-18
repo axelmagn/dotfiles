@@ -16,8 +16,8 @@ Be warned: here be lazy dragons.
  ||      /    \)___)\
  | \____(      )___) )___
   \______(_______;;; __;;;
-  ```
-  
+```
+
 ## Requirements
 
 I've done my best to shave this down to a small, dumb non-package. It does
@@ -30,15 +30,15 @@ you will need:
 Additionally, you will need to do the usual git setup with `ssh-keygen` if you
 intend to clone via git for easy editing.
 
-``` bash
+```bash
 ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
- 
+
 ## Usage
 
 ### First-time install
 
-``` sh
+```sh
 # from HOME
 git clone git@github.com:axelmagn/dotfiles.git
 cd dotfiles
@@ -52,7 +52,6 @@ stow .
 stow -R .
 ```
 
-
 ### Pull in changes to managed files
 
 ```sh
@@ -60,8 +59,7 @@ stow -R .
 stow --adopt .
 ```
 
-
 ## Post-install
 
+- zsh: create a `.zshenv` file containing `export ZDOTDIR="$HOME"/.config/zsh`
 - [Doom Emacs](https://github.com/doomemacs/doomemacs#install)
-
