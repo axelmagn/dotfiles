@@ -3,7 +3,7 @@
     email = axelmagn@gmail.com
 
 [core]
-    editor = vim
+    editor = nvim
     pager = less -R
 
 [color]
@@ -36,3 +36,10 @@
 [merge]
     conflictstyle = diff3
      ff = only
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
