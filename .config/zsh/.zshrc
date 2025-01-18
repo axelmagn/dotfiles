@@ -62,3 +62,5 @@ eval "$(pyenv init -)"
 # gcloud
 export PATH="${PATH}:/opt/google-cloud-cli/bin"
 
+# use emacs bindings for hotkeys in tmux
+bindkey -e

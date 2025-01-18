@@ -61,5 +61,4 @@ stow --adopt .
 
 ## Post-install
 
-- zsh: create a `.zshenv` file containing `export ZDOTDIR="$HOME"/.config/zsh`
 - [Doom Emacs](https://github.com/doomemacs/doomemacs#install)
