@@ -64,3 +64,13 @@ export PATH="${PATH}:/opt/google-cloud-cli/bin"
 
 # use emacs bindings for hotkeys in tmux
 bindkey -e
+
+# ZVM
+export ZVM_INSTALL="$HOME/.zvm/self"
+export PATH="$PATH:$HOME/.zvm/bin"
+export PATH="$PATH:$ZVM_INSTALL/"
+
+# emscripten
+export PATH="$PATH:${HOME}/workspace/foss/emsdk/"
+export PATH="$PATH:${HOME}/workspace/foss/emsdk/upstream/emscripten"
+

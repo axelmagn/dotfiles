@@ -1,0 +1,2 @@
+- [ ] errors at end of line are truncated
+- [ ] (python) autoformatter does not insert line breaks for lines that are too long
