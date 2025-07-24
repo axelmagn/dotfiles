@@ -66,5 +66,18 @@ require("lazy").setup({
     -- comment toggling and whatnot
     "numToStr/Comment.nvim",
 
-    "folke/which-key.nvim",
+    {
+        "folke/which-key.nvim",
+        event = "VeryLazy",
+        opts = {},
+        keys = {
+            {
+                "<space>?",
+                function()
+                    require("which-key").show({global = false})
+                end,
+                desc = "Buffer Local Keymaps (which-key)",
+            }
+        },
+    },
 })

@@ -10,16 +10,16 @@ require('mason').setup({
 
 require('mason-lspconfig').setup({
     -- A list of servers to automatically install if they're not already installed
-    ensure_installed = { 
+    ensure_installed = {
         -- python
-        'pylsp', 
+        'pylsp',
         'ruff',
         -- lua
-        'lua_ls', 
+        'lua_ls',
         -- rust
-        'rust_analyzer', 
+        'rust_analyzer',
         -- C/C++
-        'clangd', 
+        'clangd',
         -- Zig
         'zls',
         -- Go
@@ -30,7 +30,7 @@ require('mason-lspconfig').setup({
         'glsl_analyzer',
         -- wgsl
         'wgsl_analyzer',
-        
+
     },
 })
 
@@ -82,20 +82,20 @@ end
 -- 1. use `:Mason` to install corresponding LSP
 -- 2. add configuration below
 lspconfig.pylsp.setup({
-	on_attach = on_attach,
+    on_attach = on_attach,
     settings = {
         -- disable linting: conflicts with ruff.  we just want jump to defn
         pylsp = {
             plugins = {
-                pyflakes = {enabled = false},
-                pylint = {enabled = false},
+                pyflakes = { enabled = false },
+                pylint = { enabled = false },
                 pycodestyle = { enabled = false },
             }
         }
     }
 })
 lspconfig.ruff.setup({
-	on_attach = on_attach,
+    on_attach = on_attach,
 })
 lspconfig.clangd.setup({
     on_attach = on_attach,
@@ -120,37 +120,37 @@ lspconfig.wgsl_analyzer.setup({
 })
 lspconfig.lua_ls.setup({
     on_attach = on_attach,
-      on_init = function(client)
-    if client.workspace_folders then
-      local path = client.workspace_folders[1].name
-      if path ~= vim.fn.stdpath('config') and (vim.loop.fs_stat(path..'/.luarc.json') or vim.loop.fs_stat(path..'/.luarc.jsonc')) then
-        return
-      end
-    end
+    on_init = function(client)
+        if client.workspace_folders then
+            local path = client.workspace_folders[1].name
+            if path ~= vim.fn.stdpath('config') and (vim.loop.fs_stat(path .. '/.luarc.json') or vim.loop.fs_stat(path .. '/.luarc.jsonc')) then
+                return
+            end
+        end
 
-    client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
-      runtime = {
-        -- Tell the language server which version of Lua you're using
-        -- (most likely LuaJIT in the case of Neovim)
-        version = 'LuaJIT'
-      },
-      -- Make the server aware of Neovim runtime files
-      workspace = {
-        checkThirdParty = false,
-        library = {
-          vim.env.VIMRUNTIME
-          -- Depending on the usage, you might want to add additional paths here.
-          -- "${3rd}/luv/library"
-          -- "${3rd}/busted/library",
-        }
-        -- or pull in all of 'runtimepath'. NOTE: this is a lot slower and will cause issues when working on your own configuration (see https://github.com/neovim/nvim-lspconfig/issues/3189)
-        -- library = vim.api.nvim_get_runtime_file("", true)
-      }
-    })
-  end,
-  settings = {
-    Lua = {}
-  }
+        client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
+            runtime = {
+                -- Tell the language server which version of Lua you're using
+                -- (most likely LuaJIT in the case of Neovim)
+                version = 'LuaJIT'
+            },
+            -- Make the server aware of Neovim runtime files
+            workspace = {
+                checkThirdParty = false,
+                library = {
+                    vim.env.VIMRUNTIME
+                    -- Depending on the usage, you might want to add additional paths here.
+                    -- "${3rd}/luv/library"
+                    -- "${3rd}/busted/library",
+                }
+                -- or pull in all of 'runtimepath'. NOTE: this is a lot slower and will cause issues when working on your own configuration (see https://github.com/neovim/nvim-lspconfig/issues/3189)
+                -- library = vim.api.nvim_get_runtime_file("", true)
+            }
+        })
+    end,
+    settings = {
+        Lua = {}
+    }
 })
 
 
