@@ -21,9 +21,9 @@
 =====================================================================
 =====================================================================
 
-----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 -- FRONTMATTER
-----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Reference Reading:
   - :Tutor
@@ -34,9 +34,9 @@ Reference Reading:
 
 --]]
 
-----------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------
 -- OPTIONS
-----------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -80,7 +80,7 @@ vim.o.undofile = true
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.o.ignorecase = true
-vim.o.smartcase = true
+vim.o.smartcase = tru
 
 -- Keep signcolumn on by default
 vim.o.signcolumn = "yes"
@@ -126,8 +126,11 @@ vim.o.foldcolumn = "0" -- '0' is not bad
 vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
+-- }}}
 
--- [[ Basic Keymaps ]]
+----------------------------------------------------------------------------------------------------
+-- GLOBAL KEYMAP
+----------------------------------------------------------------------------------------------------
 --  See `:help vim.keymap.set()`
 
 -- Clear highlights on search when pressing <Esc> in normal mode
@@ -167,6 +170,9 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
 
 -- [[ Basic Autocommands ]]
+----------------------------------------------------------------------------------------------------
+-- AUTOCOMMANDS
+----------------------------------------------------------------------------------------------------
 --  See `:help lua-guide-autocommands`
 
 -- Highlight when yanking (copying) text
@@ -180,6 +186,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
+----------------------------------------------------------------------------------------------------
+-- LAZY.NVIM PLUGINS
+----------------------------------------------------------------------------------------------------
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -878,27 +887,27 @@ require("lazy").setup({
 		},
 	},
 
-	"catppuccin/nvim",
-	"rebelot/kanagawa.nvim",
-	"navarasu/onedark.nvim",
-	{ -- You can easily change to a different colorscheme.
-		-- Change the name of the colorscheme plugin below, and then
-		-- change the command in the config to whatever the name of that colorscheme is.
-		--
-		-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-		"folke/tokyonight.nvim",
-		priority = 1000, -- Make sure to load this before all the other start plugins.
-		config = function()
-			---@diagnostic disable-next-line: missing-fields
-			require("tokyonight").setup({
-				styles = {
-					comments = { italic = false }, -- Disable italics in comments
-				},
-			})
-
-			vim.cmd.colorscheme("tokyonight-night")
-		end,
-	},
+	-- "catppuccin/nvim",
+	-- "rebelot/kanagawa.nvim",
+	-- "navarasu/onedark.nvim",
+	-- { -- You can easily change to a different colorscheme.
+	-- 	-- Change the name of the colorscheme plugin below, and then
+	-- 	-- change the command in the config to whatever the name of that colorscheme is.
+	-- 	--
+	-- 	-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
+	-- 	"folke/tokyonight.nvim",
+	-- 	priority = 1000, -- Make sure to load this before all the other start plugins.
+	-- 	config = function()
+	-- 		---@diagnostic disable-next-line: missing-fields
+	-- 		require("tokyonight").setup({
+	-- 			styles = {
+	-- 				comments = { italic = false }, -- Disable italics in comments
+	-- 			},
+	-- 		})
+	--
+	-- 		vim.cmd.colorscheme("tokyonight-night")
+	-- 	end,
+	-- },
 
 	-- Highlight todo, notes, etc in comments
 	{
@@ -1060,14 +1069,14 @@ require("lazy").setup({
 })
 
 -- enable neovim to be the external editor for godot, if the cwd has a project.godot file
-if vim.fn.filereadable(vim.fn.getcwd() .. "/project.godot") == 1 then
-	local addr = "./godot.pipe"
-	if vim.fn.has("win32") == 1 then
-		-- windows can't pipe so use localhost
-		addr = "127.0.0.1:6004"
-	end
-	vim.fn.serverstart(addr)
-end
+-- if vim.fn.filereadable(vim.fn.getcwd() .. "/project.godot") == 1 then
+-- 	local addr = "./godot.pipe"
+-- 	if vim.fn.has("win32") == 1 then
+-- 		-- windows can't pipe so use localhost
+-- 		addr = "127.0.0.1:6004"
+-- 	end
+-- 	vim.fn.serverstart(addr)
+-- end
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
